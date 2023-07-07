@@ -1,0 +1,3 @@
+exportPattern("^[[:alpha:]]+")
+importFrom("stats", "ks.test", "ecdf", "t.test", "wilcox.test", "quantile")
+importFrom("DiPs", "check")

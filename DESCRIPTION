@@ -1,0 +1,13 @@
+Package: met
+Type: Package
+Title: Evaluating and Improving Matched Samples in Observational Studies
+Version: 0.1.1
+Author: Ruoqi Yu
+Maintainer: Ruoqi Yu <ruoqi.yu.ry@gmail.com>
+Description: Evaluate covariate balance of a matched sample, and suggest a new feature that the new match should balance if the current match is not satisfactory (only available with method being generalized Kolmogorov-Smirnov statistic on a finite set, GFKS for short).
+License: MIT+file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.5.0)
+Imports: stats, DiPs
+Suggests: optmatch
