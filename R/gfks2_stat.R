@@ -47,12 +47,14 @@ gfks2_stat<-function(x,z){
     if (nrow(tb1)<nlevel1){
       A1=matrix(0,nrow=nlevel1,ncol=ncol(tb1))
       A1[as.numeric(unique(dd1[,1])),]=tb1
+    }else{
+      A1<-tb1
     }
     if (ncol(tb1)<nlevel2){
       tb1=matrix(0,nrow=nlevel1,ncol=nlevel2)
       tb1[,as.numeric(unique(dd1[,2]))]=A1
     }
-    A1<-tb1
+    #A1<-tb1
     B1<-A1
     for (i in 1:nlevel1) B1[i,]=cumsum(A1[i,])
     C11<-B1
@@ -65,12 +67,14 @@ gfks2_stat<-function(x,z){
     if (nrow(tb0)<nlevel1){
       A0=matrix(0,nrow=nlevel1,ncol=ncol(tb0))
       A0[as.numeric(unique(dd0[,1])),]=tb0
+    }else{
+      A0<-tb0
     }
     if (ncol(tb0)<nlevel2){
       tb0=matrix(0,nrow=nlevel1,ncol=nlevel2)
       tb0[,as.numeric(unique(dd0[,2]))]=A0
     }
-    A0<-tb0
+    #A0<-tb0
     B0<-A0
     for (i in 1:nlevel1) B0[i,]=cumsum(A0[i,])
     C01<-B0
